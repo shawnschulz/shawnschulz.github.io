@@ -1,5 +1,27 @@
-    <div className = "portfolio-body">
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<script>
+	function changeMode() {
+	  
+        	var element = document.body;
+	  element.classList.toggle("dark-mode");
+	}
+    </script>
+    <input onclick="changeMode()" type="checkbox"
+               id="switch"
+               class="checkbox" />
+
+        <label for="switch"
+               class="toggle">
+        </label>
+<div className = "portfolio-body">
+	<b>
     Shawn Schulz's Website
+	</b>
     <div>
             <img src=https://shawnschulz.github.io/docs/assets/images/profile_pic.jpg style= {{width: 180, height: 180}}/>
 	    <p>
@@ -38,7 +60,7 @@ In my previous experiences I have worked to tackle these challenges. At my job a
         <div className="project-icons-container">
         <a href="https://github.com/shawnschulz/gpt-flow" target="_blank" rel="noopener noreferrer">
         <p>
-             | gpt-flow, an llm flowchart | 
+             gpt-flow, an llm flowchart
         </p>
 	<p>
 		One of my first side projects I did at my analyst position, which helped me learn React, javascript, typescript, and an introduction to full stack development.
@@ -48,7 +70,7 @@ In my previous experiences I have worked to tackle these challenges. At my job a
 	</video>
         <a href="https://github.com/shawnschulz/transcriptome-transformer" target="_blank" rel="noopener noreferrer">
         <p>
-        |  transcriptome-transformer  | 
+        transcriptome-transformer
         </p>
 	<p>
 		My attempt to learn transformers and make a matrix and neural network layer library from scratch in C++. Still a WIP.
@@ -57,7 +79,7 @@ In my previous experiences I have worked to tackle these challenges. At my job a
         </a>
         <a href="https://github.com/shawnschulz/3d_printer_liquid_handler_attachment" target="_blank" rel="noopener noreferrer">
         <p>
-        |  robotic liquid handler  | 
+        robotic liquid handler
         </p>
 	<p>
 		A project to make a robotic linquid handler attachment for 3D printers. Still a WIP but you can see some of the mechanisms I'm making for the project.
@@ -69,7 +91,7 @@ In my previous experiences I have worked to tackle these challenges. At my job a
 	</video>
         <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
         <p>
-        | research papers |
+        research papers
         </p>
 	<p>
 		I am currently a co-author on two papers accepted for publication. Check them out!
@@ -78,7 +100,7 @@ In my previous experiences I have worked to tackle these challenges. At my job a
         </a>
             <a href="https://bankerz.itch.io/" target="_blank" rel="noopener noreferrer">
         <p>
-        | video games on itch.io! |
+        video games on itch.io!
         </p>
 	<p>
 		I develop video games in my free time, currently working on a tactical rpg project that I'm still developing!
@@ -87,3 +109,5 @@ In my previous experiences I have worked to tackle these challenges. At my job a
             </a>
         </div>
       </div>
+</body>
+ </html>
