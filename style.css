@@ -1,0 +1,106 @@
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 4em 1em;
+  color: #555;
+
+
+}
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+strong {
+  color: #333;
+}
+code,
+pre {
+  background: #eee;
+}
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+}
+
+pre {
+  padding: 1em;
+}
+a {
+  color: #8442f5;
+}
+body {
+  color: #566b78;
+}
+
+code,
+pre {
+  background: #f5f7f9;
+  border-bottom: 1px solid #d8dee9;
+  color: #a7adba;
+}
+
+pre {
+  border-left: 2px solid #69c;
+}
+.dark-mode {
+            background-color: black;
+            color: white;
+        }
+.light-mode {
+    background-color: white;
+    color: black;
+}
+h1 {
+        color: black;
+    }
+           
+    /* toggle in label designing */
+    .toggle {
+        position : relative ;
+        display : inline-block;
+        width : 100px;
+        height : 52px;
+        background-color: white;
+        border-radius: 30px;
+        border: 2px solid gray;
+	background: url("./docs/assets/images/itch_icon.png");
+    }
+           
+    /* After slide changes */
+    .toggle:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: gray;
+        top: 1px; 
+        left: 1px;
+        transition:  all 0.5s;
+	background: url("./docs/assets/images/light_mode_icon.png");
+
+    }
+           
+    /* Toggle text */
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+           
+    /* Checkbox checked effect */
+    .checkbox:checked + .toggle::after {
+        left : 49px; 
+    }
+           
+    /* Checkbox checked toggle label bg color */
+    .checkbox:checked + .toggle {
+        background-color: black;
+    }
+           
+    /* Checkbox vanished */
+    .checkbox { 
+        display : none;
+    }
