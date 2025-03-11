@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="intro-description">
 	<script>
 	function changeMode() {
 	  
@@ -18,6 +19,7 @@
         <label for="switch"
                class="toggle">
         </label>
+<div class = "portfolio-body">
 	   
             <a href="https://www.linkedin.com/in/shawn-schulz-151b0313b/" target="_blank" rel="noopener noreferrer">
             <img align="right" src="https://shawnschulz.github.io/docs/assets/images/linkedin.png" style= {{width: 60, height: 60}}/>
@@ -28,12 +30,12 @@
             <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
             <img align="right" src="https://shawnschulz.github.io/docs/assets/images/google_scholar_icon.png" style= {{width: 60, height: 60}}/>
             </a>
-<div className = "portfolio-body">
 
 	<b>
 	About Me
 	</b>
-    <div>
+    <p>
+    </p>
             <img src=https://shawnschulz.github.io/docs/assets/images/profile_pic.jpg style= {{width: 180, height: 180}}/>
 	    <p>
             Email: shawnschulz@gmail.com
@@ -49,46 +51,55 @@
 	    <p>
 	    In my time as a data engineer, I developed an application at Stanford which identified precise therapeutic targets from hundreds of thousands of candidate mutations. As a machine learning researcher at Berkeley Artificial Intelligence Research, I helped develop a neural network model for classifying cell types and used it to characterize the gene expression of lung cells infected by SARS-CoV2. 
 	    </p>
-       </div>
-
         <p> 
         Click on one of the icons below to check out the projects I'm working on!
         </p>
-        <div className="project-icons-container">
+       </div>
+
+        <div class="project-icons-container">
+            <a href="http://www.shmage.xyz/landing_page" target="_blank" rel="noopener noreferrer">
+            <img class="icon" src = "./docs/assets/images/shblog_icon.png" width="80px" height = "80px" align="left" margin-left="1em"/>
         <a href="http://www.shmage.xyz/landing_page" target="_blank" rel="noopener noreferrer">
         <p>
              gpt-flow, an llm flowchart
         </p>
+        </a>
 	<p>
 		A flow chart large language model runner, fully deployed over aws with frontend written in typescript/React and a backend written in python using Flask. 
 	</p>
-        </a>
 	<video controls width="1000" src="https://shawnschulz.github.io/docs/assets/videos/gpt-flow-demo.mp4">
 	</video>
-        <a href="https://github.com/shawnschulz/cell_designer" target="_blank" rel="noopener noreferrer">
         </p>
-        <div className="project-icons-container">
+        </div>
+        <div class="project-icons-container">
+            <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
+            <img class="veccy_icon" src = "./docs/assets/images/veccy_buildl.png" width="80px" height = "80px" align="left" margin-left="1em"/>
         <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
         <p>
              veccy, a RAG application
         </p>
+        </a>
 	<p>
         A RAG application that improves semantic search with query prefetching and implements a built in web crawler that preprocesses scraped webpages with an LLM. Written in React js with backend in python FastAPI, pinecone for vector database.
 	</p>
-        </a>
-	<img src="https://shawnschulz.github.io/docs/assets/images/veccy_app_screenshot.png">
+            <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
+	<img src="https://shawnschulz.github.io/docs/assets/images/veccy_app_screenshot.png" width='1000px' height='500px'>
 	</img>
         <a href="https://github.com/shawnschulz/cell_designer" target="_blank" rel="noopener noreferrer">
+        </div>
+        <div class="project-icons-container">
         <p>
         Cell Designer
         </p>
+        </a>
 	<p>
 		A web application to design and render 3D models of cells and solve how they interact. Still a WIP.
 	</p>
         <img src="https://shawnschulz.github.io/docs/assets/images/cell_renderer_screenshot.png"/>
-        </a>
         <a href="https://github.com/shawnschulz/3d_printer_liquid_handler_attachment" target="_blank" rel="noopener noreferrer">
         <p>
+        </div>
+        <div class="project-icons-container">
         robotic liquid handler
         </p>
 	<p>
@@ -101,6 +112,8 @@
 	</video>
         <video controls width="250" src="https://shawnschulz.github.io/docs/assets/videos/cam_demo.mp4">
 	</video>
+        </div>
+        <div class="project-icons-container">
         <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
         <p>
         research papers
@@ -112,6 +125,8 @@
         </a>
             <a href="https://bankerz.itch.io/" target="_blank" rel="noopener noreferrer">
         <p>
+        </div>
+        <div class="project-icons-container">
         video games on itch.io!
         </p>
 	<p>
@@ -120,6 +135,6 @@
             <img src="https://shawnschulz.github.io/docs/assets/images/itch.io.png" style= {{width: 220, height: 220}}/>
             </a>
         </div>
-      </div>
+        </div>
 </body>
  </html>
