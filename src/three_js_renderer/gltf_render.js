@@ -11,10 +11,11 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 1.0 / window.
 camera.position.z = 5;
 
 // Renderer setup
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
 const container = document.getElementById( 'canvas' );
 document.body.appendChild(container);
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+container.appendChild( renderer.domElement );
 
 // Lighting
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -32,7 +33,7 @@ camera.position.set( 0, 1, 10);
 controls.update();
 
 // GLTF Loader
-const loader = new GLTFLoader();
+eonst loader = new GLTFLoader();
 let model = new THREE.Object3D();
 
 
