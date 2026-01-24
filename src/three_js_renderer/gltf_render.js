@@ -36,7 +36,7 @@ let model = new THREE.Object3D();
 
 
 loader.load(
-    './data/cells/stromal_like.glb', (gltf) => {
+    './src/stromal_like.glb', (gltf) => {
         model = gltf.scene;
         model.name = 'stromal_cell';
         scene.add(model);
