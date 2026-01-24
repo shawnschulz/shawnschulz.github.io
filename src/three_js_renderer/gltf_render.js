@@ -33,7 +33,7 @@ camera.position.set( 0, 1, 10);
 controls.update();
 
 // GLTF Loader
-eonst loader = new GLTFLoader();
+const loader = new GLTFLoader();
 let model = new THREE.Object3D();
 
 
