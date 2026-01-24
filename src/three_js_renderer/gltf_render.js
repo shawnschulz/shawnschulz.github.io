@@ -35,6 +35,7 @@ const loader = new GLTFLoader();
 let model = new THREE.Object3D();
 
 
+// balgh
 loader.load(
     './src/stromal_like.glb', (gltf) => {
         model = gltf.scene;
