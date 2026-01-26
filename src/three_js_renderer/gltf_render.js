@@ -11,11 +11,11 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 1.0 / window.
 camera.position.z = 5;
 
 // Renderer setup
-const container = document.getElementById( '3d_view' );
-document.body.appendChild(container);
+const container = document.getElementById( 'canvas' );
+document.body.insertBefore(container);
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-container.appendChild( renderer.domElement );
+container.insertBefore( renderer.domElement );
 
 // Lighting
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
