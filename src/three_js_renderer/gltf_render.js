@@ -17,7 +17,6 @@ camera.position.z = 5;
 // Renderer setup
 const container = document.getElementById( 'canvas' );
 document.body.appendChild(container);
-const renderer = new THREE.WebGLRenderer();
 var renderer = new THREE.WebGLRenderer( {antialias: true} );
 renderer.setSize( container.clientWidth-16, container.clientHeight-16 );
 container.appendChild( renderer.domElement );
