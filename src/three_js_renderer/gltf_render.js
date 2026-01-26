@@ -12,10 +12,10 @@ camera.position.z = 5;
 
 // Renderer setup
 const container = document.getElementById( 'canvas' );
-document.body.insertBefore(container);
+document.body.insertBefore(container, document.body.firstChild);
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
-container.insertBefore( renderer.domElement );
+container.insertBefore( renderer.domElement, document.body.firstChild);
 
 // Lighting
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
