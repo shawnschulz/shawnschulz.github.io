@@ -7,14 +7,19 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xf0f0f0);
 
 // Camera setup
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 1.0 / window.innerHeight, 0.1, 1000);
+//const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 1.0 / window.innerHeight, 0.1, 1000);
+
+var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.clientHeight );
+    camera.position.set( 2, 5, 10 );
+    camera.lookAt( scene.position );
 camera.position.z = 5;
 
 // Renderer setup
 const container = document.getElementById( 'canvas' );
 document.body.appendChild(container);
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth / 5.0, window.innerHeight / 5.0);
+var renderer = new THREE.WebGLRenderer( {antialias: true} );
+renderer.setSize( container.clientWidth-16, container.clientHeight-16 );
 container.appendChild( renderer.domElement );
 
 // Lighting

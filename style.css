@@ -22,6 +22,12 @@ code {
   vertical-align: text-bottom;
 }
 
+div {
+	padding: 8px;
+	margin: 0 auto;
+	width: 400px;
+	height: 300px;
+}
 .project-icons-container {
     text-align: center;
     background: #211E1E;
