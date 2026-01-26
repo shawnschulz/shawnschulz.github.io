@@ -9,14 +9,14 @@ scene.background = new THREE.Color(0xf0f0f0);
 // Camera setup
 //const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 1.0 / window.innerHeight, 0.1, 1000);
 
-var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.clientHeight );
-    camera.position.set( 2, 5, 10 );
-    camera.lookAt( scene.position );
-camera.position.z = 5;
 
 // Renderer setup
 const container = document.getElementById( 'canvas' );
 document.body.appendChild(container);
+var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.clientHeight );
+    camera.position.set( 2, 5, 10 );
+    camera.lookAt( scene.position );
+camera.position.z = 5;
 var renderer = new THREE.WebGLRenderer( {antialias: true} );
 renderer.setSize( container.clientWidth-16, container.clientHeight-16 );
 container.appendChild( renderer.domElement );
