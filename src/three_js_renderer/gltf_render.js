@@ -18,7 +18,7 @@ var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.c
     camera.lookAt( scene.position );
 camera.position.z = 5;
 var renderer = new THREE.WebGLRenderer( {antialias: true} );
-renderer.setSize( container.clientWidth-16 / 5, container.clientHeight-16/ 5 );
+renderer.setSize( container.clientWidth-32, container.clientHeight-32);
 container.appendChild( renderer.domElement );
 
 // Lighting
