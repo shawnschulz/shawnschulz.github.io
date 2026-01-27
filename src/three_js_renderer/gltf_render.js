@@ -1,6 +1,6 @@
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GUI } from 'dat.gui'
+// import { GUI } from 'dat.gui'
 import * as THREE from 'three';
 
 const scene = new THREE.Scene();
@@ -155,11 +155,11 @@ function animate() {
 animate();
 const gltf_object = scene.getObjectByName( "stromal_cell" );
 let color2 = 0xFF0000;
-const gui = new GUI();
-const cellsFolder = gui.addFolder('Cells')
-const inferenceFolder = gui.addFolder('Inference')
-const colorFolder = gui.addFolder('Colors');
-const receptorDensity = gui.addFolder('Receptor Rendering')
+//const gui = new GUI();
+//const cellsFolder = gui.addFolder('Cells')
+//const inferenceFolder = gui.addFolder('Inference')
+//const colorFolder = gui.addFolder('Colors');
+//const receptorDensity = gui.addFolder('Receptor Rendering')
 //colorFolder.add(color2, 'color')
 placeOnSurface(gltf_object);
 placeOnSurface(0xFFC107)
