@@ -13,7 +13,7 @@ scene.background = new THREE.Color(0xf0f0f0);
 // Renderer setup
 const container = document.getElementById( 'canvas' );
 document.body.appendChild(container);
-var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.clientHeight );
+var camera = new THREE.PerspectiveCamera( 30, container.clientWidth -32 / container.clientHeight -32 );
     camera.position.set( 2, 5, 10 );
     camera.lookAt( scene.position );
 camera.position.z = 5;
