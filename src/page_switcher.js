@@ -1,8 +1,15 @@
 function showPage(id) {
-  console.log("got page switch")
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
+  history.pushState({}, '', '#' + id);
 }
 
-// Show default page on load
-showPage('about');
+// Handle back/forward
+window.addEventListener('popstate', () => {
+  const id = location.hash.replace('#', '') || 'about';
+  showPage(id);
+});
+
+// Load correct page on initial visit
+const id = location.hash.replace('#', '') || 'about';
+showPage(id);
