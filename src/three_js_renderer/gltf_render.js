@@ -11,15 +11,16 @@ scene.background = new THREE.Color(0xf0f0f0);
 
 
 // Renderer setup
-const container = document.getElementById( 'canvas' );
-document.body.appendChild(container);
-var camera = new THREE.PerspectiveCamera( 30, container.clientWidth/ container.clientHeight );
+const container = document.getElementById( 'cell-3d-canvas' );
+var camera = new THREE.PerspectiveCamera( 60, container.clientWidth/ container.clientHeight );
     camera.position.set( 2, 5, 10 );
     camera.lookAt( scene.position );
 camera.position.z = 5;
 var renderer = new THREE.WebGLRenderer( {antialias: true} );
-renderer.setSize( container.clientWidth-32, container.clientHeight-32);
+renderer.setSize( container.clientWidth, container.clientHeight);
 container.appendChild( renderer.domElement );
+
+
 
 // Lighting
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -36,6 +37,20 @@ const controls = new OrbitControls( camera, renderer.domElement );
 camera.position.set( 0, 1, 10);
 controls.update();
 
+let userInteracting = false;
+let interactionTimeout;
+
+// Resume auto-orbit after 2 seconds of no input
+const onInteractionEnd = () => {
+  clearTimeout(interactionTimeout);
+  interactionTimeout = setTimeout(() => {
+    userInteracting = false;
+  }, 2000);
+};
+
+container.addEventListener('mousedown', () => { userInteracting = true; });
+container.addEventListener('touchstart', () => { userInteracting = true; });
+
 // GLTF Loader
 const loader = new GLTFLoader();
 let model = new THREE.Object3D();
@@ -43,37 +58,13 @@ let model = new THREE.Object3D();
 
 loader.load(
     './src/stromal_like.glb', (gltf) => {
-        model = gltf.scene;
+        const model = gltf.scene;
         model.name = 'stromal_cell';
         scene.add(model);
         model.position.set(0,0,0);
     }
 );
 
-//loader.load(
-//    // Resource URL - replace with your GLTF file path
-//    './data/cells/stromal_like.glb',
-//    
-//    // Called when the resource is loaded
-//    function (gltf) {
-//        scene.add(gltf.scene);
-//    },
-//    
-//    // Called while loading is progressing
-//    function (xhr) {
-//        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-//    },
-//    
-//    // Called when loading has errors
-//    function (error) {
-//        console.error('An error happened', error);
-//    }
-//);
-
-// Make 3 different colored cubes for the demo
-//const geometry = new THREE.BoxGeometry( 1, 1, 1 ); 
-//const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
-//const cube = new THREE.Mesh( geometry, material ); 
 
 function randrange(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -147,6 +138,14 @@ function placeOnSurface(receptor_color=0x1E88E5, receptor_shape, protein_render_
 function animate() {
     requestAnimationFrame(animate);
 
+    if (!userInteracting) {
+        // Orbit camera around Y axis
+        const time = Date.now() * 0.0005;
+        const radius = 10; // match your camera distance
+        camera.position.x = Math.sin(time) * radius;
+        camera.position.z = Math.cos(time) * radius;
+        camera.lookAt(0, 0, 0);
+    }
 	// required if controls.enableDamping or controls.autoRotate are set to true
 	controls.update();
 
@@ -183,9 +182,3 @@ function getReceptorObject(color, shape) {
 }
 
 
-// Handle window resizing
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});

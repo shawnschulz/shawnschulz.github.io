@@ -1,43 +1,69 @@
 body {
-  margin: 0 auto;
-  font-family: "Noto Sans Mono"; 
-  line-height: 1.5;
-  padding: 4em 1em;
-  color: #555;
+  font-family: "IBM Plex Mono";
 }
-h2 {
-  margin-top: 1em;
-  padding-top: 1em;
+h3 {
+  font-family: "IBM Plex Mono";
+  color: #30C994;
+}
+h1 {
+margin: 1.5em;
+font-family: 'Space Mono', monospace;
+  color: #00FF8B;
 }
 strong {
   color: #333;
 }
 code,
 pre {
-  background: #eee;
+  background: #FFF8BF;
 }
 
 code {
   padding: 2px 4px;
   vertical-align: text-bottom;
 }
-
-div {
-	width: 1200px;
-	height: 800px;
+.page {
+  display: none;
 }
+
+.page.active {
+  display: block;
+}
+#app-root {
+    display: flex;
+}
+#page-about {
+  flex: 1;
+  min-width: 0;
+}
+
+#sidebar {
+  width: 250px;
+  height: auto;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: #44735F;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .project-icons-container {
     text-align: center;
-    background: #211E1E;
-    max-width: 100em;
     padding: 1em 1em;
     margin: 1em auto;
-    border-radius: 1em;
     overflow: hidden;
     align: center;
-}
-.project-icons-container p {
-    color: #fff;
 }
 .project-icons-container .icon {
     margin-left: 3em;
@@ -67,18 +93,8 @@ div {
     padding: 0.1em 0.1em;
 }
 .portfolio-body {
-    background: #211E1E;
-    max-width: 100em;
     padding: 1em 1em;
-    margin: 1em auto;
-    border-radius: 1em;
     align: center;
-}
-.portfolio-body p {
-    color: #fff;
-}
-.portfolio-body b {
-    color: #fff;
 }
 
 pre {
@@ -88,45 +104,57 @@ pre {
     border-radius: 1em;
     margin: 0em 0.1em;
 }
-.project-icons-container a {
-  color: #fff;
-}
 body {
   color: #566b78;
 }
 
 code,
 pre {
-  background: #f5f7f9;
+  background: #FFF8BF;
   border-bottom: 1px solid #d8dee9;
   color: #a7adba;
 }
 
-pre {
-  border-left: 2px solid #69c;
-}
 .dark-mode {
             background-color: black;
             color: white;
         }
 .light-mode {
-    background-color: white;
+    background-color: #FFF8BF;
     color: black;
 }
-h1 {
-        color: black;
-    }
-           
+#topbar {
+
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
+    display: flex;
+    align-items: center;
+    background-color: #44735F;
+      padding: 0 24px;
+}
+#topbar a {
+      padding: 0 24px;
+}
+#topbar-icons {
+      padding: 0 24px;
+    margin-left: auto;
+}
+#sidebar-item {
+  transition: background 0.2s ease;
+}
+
+#sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
     /* toggle in label designing */
     .toggle {
         position : relative ;
         display : inline-block;
-        width : 100px;
-        height : 52px;
+        width : 114px;
+        height : 64px;
         background-color: white;
         border-radius: 30px;
-        border: 2px solid gray;
-        left: 2.5em;
+        border: 2px solid black;
 	background: url("./docs/assets/images/itch_icon.png");
     }
            
@@ -134,14 +162,14 @@ h1 {
     .toggle:after {
         content: '';
         position: absolute;
-        width: 50px;
-        height: 50px;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
         background-color: gray;
         top: 1px; 
         left: 1px;
         transition:  all 0.5s;
-	background: url("./docs/assets/images/light_mode_icon.png");
+	background: url("./docs/assets/images/shblog_icon.png");
 
     }
            
@@ -149,7 +177,7 @@ h1 {
            
     /* Checkbox checked effect */
     .checkbox:checked + .toggle::after {
-        left : 49px; 
+        left : 49px;
     }
            
     /* Checkbox checked toggle label bg color */
@@ -160,4 +188,14 @@ h1 {
     /* Checkbox vanished */
     .checkbox { 
         display : none;
+    }
+
+    #cell-3d-canvas {
+        width: 800px !important;
+        height:400px !important;
+        max-width: 100em;
+        padding: 1em 1em;
+        margin: 1em auto;
+        overflow: hidden;
+        align: center;
     }

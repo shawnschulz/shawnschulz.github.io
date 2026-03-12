@@ -2,151 +2,194 @@
 <html>
 <head>
 <link rel="stylesheet" href="./style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="intro-description">
-	<script>
-	function changeMode() {
-	  
-        	var element = document.body;
-	  element.classList.toggle("dark-mode");
-	}
-    </script>
-    <input onclick="changeMode()" type="checkbox"
-               id="switch"
-               class="checkbox" />
+<div id="topbar">
+    <h1>
+        biotech software infrastructure; design and making
+    </h1>
 
-        <label for="switch"
-               class="toggle">
-        </label>
-<div class = "portfolio-body">
-	   
-            <a href="https://www.linkedin.com/in/shawn-schulz-151b0313b/" target="_blank" rel="noopener noreferrer">
-            <img align="right" src="https://shawnschulz.github.io/docs/assets/images/linkedin.png" style= {{width: 60, height: 60}}/>
-            </a>
-            <a href="https://github.com/shawnschulz" target="_blank" rel="noopener noreferrer">
-            <img align="right" src="https://shawnschulz.github.io/docs/assets/images/github.png" style= {{width: 60, height: 60}}/>
-            </a>
-            <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-            <img align="right" src="https://shawnschulz.github.io/docs/assets/images/google_scholar_icon.png" style= {{width: 60, height: 60}}/>
-            </a>
-
-	<b>
-	About Me
-	</b>
-    <p>
-    </p>
-            <img src=https://shawnschulz.github.io/docs/assets/images/profile_pic.jpg style= {{width: 180, height: 180}}/>
-	    <p>
-            Email: shawnschulz@gmail.com
-	    </p>
-        <a href="./docs/assets/shawn_schulz_resume_ver2.pdf" target="_blank" rel="noopener noreferrer">
-        <p>
-            You can download my resume here!
-        </p>
+    <div id="page-blog" class="page">
+        <div id="sidebar-item">
+        <a onclick="showPage('blog')">
+        <h1> Blog </h1>
         </a>
-	    <p>
-	    I’m Shawn, a current Molecular Science and Software Engineering MS student at UC Berkeley. I also got my BA in Immunology from UC Berkeley. I'm a data and software engineer who loves the satisfaction that comes with building things and understanding how stuff works under the hood. 
-	    </p>
-	    <p>
-	    In my time as a data engineer, I developed an application at Stanford which identified precise therapeutic targets from hundreds of thousands of candidate mutations. As a machine learning researcher at Berkeley Artificial Intelligence Research, I helped develop a neural network model for classifying cell types and used it to characterize the gene expression of lung cells infected by SARS-CoV2. 
-	    </p>
-        <p> 
-        Click on one of the icons below to check out the projects I'm working on!
-        </p>
-       </div>
+        </div>
+    </div>
 
-        <div class="project-icons-container">
-            <p>
-            Cell Designer
-            </p>
-            </a>
-        <p>
-            A web application to design and render 3D models of cells and solve how they interact. Still a WIP.
-        </p>
-            <script type="importmap">
-            {
-                "imports": {
-                "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
-                "dat.gui": "https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.module.js"
-                }
+    <div id="topbar-icons">
+                    <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                    <img align="right" src="https://shawnschulz.github.io/docs/assets/images/google_scholar_icon.png" style= {{width: 60, height: 60}}/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shawn-schulz-151b0313b/" target="_blank" rel="noopener noreferrer">
+                    <img align="right" src="https://shawnschulz.github.io/docs/assets/images/linkedin.png" style= {{width: 60, height: 60}}/>
+                    </a>
+                    <a href="https://github.com/shawnschulz" target="_blank" rel="noopener noreferrer">
+                    <img align="right" src="https://shawnschulz.github.io/docs/assets/images/github.png" style= {{width: 60, height: 60}}/>
+                    </a>
+    </div>
+            <script>
+            function changeMode() {
+
+                    var element = document.body;
+            element.classList.toggle("dark-mode");
             }
             </script>
-            <script src="./src/three_js_renderer/gltf_render.js" type = "module"></script>
+            <input onclick="changeMode()" type="checkbox"
+                    id="switch"
+                    class="checkbox" />
 
-            <a href="https://github.com/shawnschulz/3d_printer_liquid_handler_attachment" target="_blank" rel="noopener noreferrer">
+                <label for="switch"
+                    class="toggle">
+                </label>
+
+</div>
+<div id="app-root">
+    <div id="sidebar">
+        <div id="sidebar-item">
+        <a onclick="showPage('about')">
+        <h1> About Me </h1>
+        </a>
+        </div>
+
+        <div id="sidebar-item">
+        <a href="https://github.com/shawnschulz" target="_blank" rel="noopener noreferrer">
+        <h1> Github</h1>
+        </a>
+        </div>
+
+
+    </div>
+    <div id="page-about" class="page">
+        <body>
+            <div class="intro-description">
+        <div class = "portfolio-body">
+
+
+            <h3>
+            About Me
+            </h3>
             <p>
-        </div>
+            </p>
+                    <img src=https://shawnschulz.github.io/docs/assets/images/profile_pic.jpg style= {{width: 180, height: 180}}/>
+                <p>
+                    Email: shawnschulz@gmail.com
+                </p>
+                <a href="./docs/assets/shawn_schulz_resume_ver2.pdf" target="_blank" rel="noopener noreferrer">
+                <p>
+                    You can download my resume here!
+                </p>
+                </a>
+                <p>
+                I’m Shawn, a current Molecular Science and Software Engineering MS student at UC Berkeley. I also got my BA in Immunology from UC Berkeley. I'm a data and software engineer who loves the satisfaction that comes with building things and understanding how stuff works under the hood.
+                </p>
+                <p>
+                In my time as a data engineer, I developed an application at Stanford which identified precise therapeutic targets from hundreds of thousands of candidate mutations. As a machine learning researcher at Berkeley Artificial Intelligence Research, I helped develop a neural network model for classifying cell types and used it to characterize the gene expression of lung cells infected by SARS-CoV2.
+                </p>
+                <p>
+                Click on one of the icons below to check out the projects I'm working on!
+                </p>
+            </div>
 
-        <div class="project-icons-container">
-        <div id="canvas"></div>
-            <a href="http://www.shmage.xyz/landing_page" target="_blank" rel="noopener noreferrer">
-            <img class="icon" src = "https://shawnschulz.github.io/docs/assets/images/shblog_icon.png" width="80px" height = "80px" align="left" margin-left="1em"/>
-        <a href="http://www.shmage.xyz/landing_page" target="_blank" rel="noopener noreferrer">
-        <p>
-             gpt-flow, an llm flowchart
-        </p>
-        </a>
-	<p>
-		A flow chart large language model runner, fully deployed over aws with frontend written in typescript/React and a backend written in python using Flask. 
-	</p>
-	<video controls width="1000" src="https://shawnschulz.github.io/docs/assets/videos/gpt-flow-demo.mp4">
-	</video>
-        </p>
-        </div>
-        <div class="project-icons-container">
-            <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
-            <img class="veccy_icon" src = "https://shawnschulz.github.io/docs/assets/images/veccy_buildl.png" width="80px" height = "80px" align="left" margin-left="1em"/>
-        <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
-        <p>
-             veccy, a RAG application
-        </p>
-        </a>
-	<p>
-        A RAG application that improves semantic search with query prefetching and implements a built in web crawler that preprocesses scraped webpages with an LLM. Written in React js with backend in python FastAPI, pinecone for vector database.
-	</p>
-            <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
-                <img src="https://shawnschulz.github.io/docs/assets/images/veccy_app_screenshot.png"> 
-	</img>
-        <a href="https://github.com/shawnschulz/cell_designer" target="_blank" rel="noopener noreferrer">
-        </div>
-        <div class="project-icons-container">
-        robotic liquid handler
-        </p>
-	<p>
-		A project to make a robotic linquid handler attachment for 3D printers. Still a WIP but you can see some of the mechanisms I'm making for the project.
-	</p>
-        </a>
-        <video controls width="250" src="https://shawnschulz.github.io/docs/assets/videos/clamp_demo.mp4">
-	</video>
-        <video controls width = "250" src="https://shawnschulz.github.io/docs/assets/videos/actuator_demo.mp4">
-	</video>
-        <video controls width="250" src="https://shawnschulz.github.io/docs/assets/videos/cam_demo.mp4">
-	</video>
-        </div>
-        <div class="project-icons-container">
-        <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-        <p>
-        research papers
-        </p>
-	<p>
-		I am currently a co-author on two papers accepted for publication. Check them out!
-	</p>
-        <img src="https://shawnschulz.github.io/docs/assets/images/pipeline.jpeg" style= {{width: 220, height: 220}}/>
-        </a>
-            <a href="https://bankerz.itch.io/" target="_blank" rel="noopener noreferrer">
-        <p>
-        </div>
-        <div class="project-icons-container">
-        video games on itch.io!
-        </p>
-	<p>
-		I develop video games in my free time, currently working on a tactical rpg project that I'm still developing!
-	</p>
-            <img src="https://shawnschulz.github.io/docs/assets/images/itch.io.png" style= {{width: 220, height: 220}}/>
-            </a>
-        </div>
-        </div>
-</body>
+                <div class="project-icons-container">
+                    <h3>
+                    Cell Designer
+                    </h3>
+                    </a>
+                <p>
+                    A web application to design and render 3D models of cells and solve how they interact. Still a WIP. You can drag the 3d model around to get a better view of the cell model!
+                </p>
+                <div id="cell-3d-canvas"></div>
+                <div id="cell-3d-canvas2"></div>
+
+                    <a href="https://github.com/shawnschulz/3d_printer_liquid_handler_attachment" target="_blank" rel="noopener noreferrer">
+                    <p>
+                </div>
+
+                <div class="project-icons-container">
+                    <a href="http://www.shmage.xyz/landing_page" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src = "https://shawnschulz.github.io/docs/assets/images/shblog_icon.png" width="80px" height = "80px" align="left" margin-left="1em"/>
+                <a href="http://www.shmage.xyz/landing_page" target="_blank" rel="noopener noreferrer">
+                <h3>
+                    gpt-flow, an llm flowchart
+                </h3>
+                </a>
+            <p>
+                A flow chart large language model runner, fully deployed over aws with frontend written in typescript/React and a backend written in python using Flask.
+            </p>
+            <video controls width="1000" src="https://shawnschulz.github.io/docs/assets/videos/gpt-flow-demo.mp4">
+            </video>
+                </p>
+                </div>
+                <div class="project-icons-container">
+                    <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
+                    <img class="veccy_icon" src = "https://shawnschulz.github.io/docs/assets/images/veccy_buildl.png" width="80px" height = "80px" align="left" margin-left="1em"/>
+                <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
+                <h3>
+                    veccy, a RAG application
+                </h3>
+                </a>
+            <p>
+                A RAG application that improves semantic search with query prefetching and implements a built in web crawler that preprocesses scraped webpages with an LLM. Written in React js with backend in python FastAPI, pinecone for vector database.
+            </p>
+                    <a href="https://dorahacks.io/buidl/23878/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://shawnschulz.github.io/docs/assets/images/veccy_app_screenshot.png">
+            </img>
+                <a href="https://github.com/shawnschulz/cell_designer" target="_blank" rel="noopener noreferrer">
+                </div>
+                <div class="project-icons-container">
+                <h3>
+                    robotic liquid handler
+                </h3>
+            <p>
+                A project to make a robotic linquid handler attachment for 3D printers. Still a WIP but you can see some of the mechanisms I'm making for the project.
+            </p>
+                </a>
+                <video controls width="250" src="https://shawnschulz.github.io/docs/assets/videos/clamp_demo.mp4">
+            </video>
+                <video controls width = "250" src="https://shawnschulz.github.io/docs/assets/videos/actuator_demo.mp4">
+            </video>
+                <video controls width="250" src="https://shawnschulz.github.io/docs/assets/videos/cam_demo.mp4">
+            </video>
+                </div>
+                <div class="project-icons-container">
+                <a href="https://scholar.google.com/citations?user=7p_tt0UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                <p>
+                research papers
+                </p>
+            <p>
+                I am currently a co-author on two papers accepted for publication. Check them out!
+            </p>
+                <img src="https://shawnschulz.github.io/docs/assets/images/pipeline.jpeg" style= {{width: 220, height: 220}}/>
+                </a>
+                    <a href="https://bankerz.itch.io/" target="_blank" rel="noopener noreferrer">
+                <p>
+                </div>
+                <div class="project-icons-container">
+                video games on itch.io!
+                </p>
+            <p>
+                I develop video games in my free time, currently working on a tactical rpg project that I'm still developing!
+            </p>
+                    <img src="https://shawnschulz.github.io/docs/assets/images/itch.io.png" style= {{width: 220, height: 220}}/>
+                    </a>
+                </div>
+                </div>
+
+                <script type="importmap">
+                    {
+                        "imports": {
+                        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+                        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
+                        "dat.gui": "https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.module.js"
+                        }
+                    }
+                    </script>
+                    <script src="./src/three_js_renderer/gltf_render.js" type = "module"></script>
+        </body>
+                    <script src="./src/page_switcher.js"></script>
+    </div>
+</div>
  </html>
