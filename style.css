@@ -6,10 +6,13 @@ h3 {
   color: #30C994;
 }
 h1 {
-margin: 1.5em;
 font-family: 'IBM Plex Mono', monospace;
-
-  color: #00FF8B;
+color: #00FF8B;
+}
+#sidebar h1 {
+font-family: 'IBM Plex Mono', monospace;
+margin: 1.5em;
+color: #00FF8B;
 }
 strong {
   color: #333;
@@ -39,7 +42,7 @@ code {
 }
 
 #sidebar {
-background-color: rgba(68, 115, 95, 0.9);
+background-color: #44735F;
 
   width: 250px;
   height: auto;
@@ -130,7 +133,7 @@ pre {
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
     display: flex;
     align-items: center;
-    background-color: rgba(68, 115, 95, 0.9);
+    background-color: #44735F;
     padding: 0 24px;
 }
 #topbar a {

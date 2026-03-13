@@ -20,6 +20,7 @@ var renderer = new THREE.WebGLRenderer( {antialias: true} );
 renderer.setSize( container.clientWidth, container.clientHeight);
 container.appendChild( renderer.domElement );
 
+scene.background = new THREE.Color( 0xffffff );
 
 
 // Lighting
