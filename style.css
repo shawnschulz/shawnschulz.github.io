@@ -7,7 +7,8 @@ h3 {
 }
 h1 {
 margin: 1.5em;
-font-family: 'Space Mono', monospace;
+font-family: 'IBM Plex Mono', monospace;
+
   color: #00FF8B;
 }
 strong {
@@ -38,6 +39,8 @@ code {
 }
 
 #sidebar {
+background-color: rgba(68, 115, 95, 0.9);
+
   width: 250px;
   height: auto;
   flex-shrink: 0;
@@ -45,7 +48,6 @@ code {
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  background: #44735F;
 }
 body {
   margin: 0;
@@ -128,11 +130,10 @@ pre {
   clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20px);
     display: flex;
     align-items: center;
-    background-color: #44735F;
-      padding: 0 24px;
+    background-color: rgba(68, 115, 95, 0.9);
+    padding: 0 24px;
 }
 #topbar a {
-      padding: 0 24px;
 }
 #topbar-icons {
       padding: 0 24px;
